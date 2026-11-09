@@ -15,8 +15,50 @@
     width: 100%;
     padding: 80px 0 0 0;
     min-height:90vh;
-    
-    
+}
+
+.produtos-grid{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+} 
+
+.produto-card{
+border : 1px solid #ccc;
+border-radius:15px;
+padding: 10px;
+text-align: center;
+box-shadow:0 4px 8px rgba(0,0,0,0.1);   
+background-color: #fff;
+margin: 0 15px 0 15px;
+font-family:sans-serif; 
+}
+
+.produto-card img {
+width:100%;
+height:150px;
+object-fit:cover;
+border-radius:15px;
+aspect-ratio: 1 / 1;
+margin-bottom:10px;
+
+}
+
+.titulo-acima-da-tabela {
+    color: #fff;
+    margin-bottom: 90px;    
+    padding: 0 20px;
+    text-align:center;
+}
+
+.legumes,.frutas,.mercearia{
+    text-align:center;
+    color:#fff;
+    margin-bottom:90px;
+}
+
+.frutas,.mercearia{
+    margin-top:90px;
 }
 
 .footer-produtos {
@@ -40,28 +82,61 @@
     
 }
 
-.secao-tabela-produtos-page {
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    box-sizing: border-box;
-    margin: 0 15px 0 15px;
+.menu-dropdown{
+  position:relative;
+  display:block;
 
 }
 
-.titulo-acima-da-tabela {
-    color: #fff;
-    margin: 0 0 40px 0;    
-    padding: 0 20px;
+.menu-dropdown .submenu {
+    position: absolute;
+    top: 100%;
+    left: 10px;
+    width: 220px;
+
+    max-height: 0;
+    opacity:0;
+    overflow:hidden;
+    transition:max-height 0.4s ease,opacity 0.3 ease,transform 0.3s ease ;
+    transform:translateY(-8px) ;
+    background-color:#fff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    border:1px solid #c8dcc8;
+    border-left: 4px solid #2e7d32;
+    z-index:999;
+    padding:0;
+    list-style: none;
+        
+}
+
+.link-submenu{
+
+    display:block;
+    padding: 8px 14px;
+    color: #333;
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: background-color 0.2s ease,color 0.2s ease;
+}
+
+.link-submenu:hover{
+
+    background-color: #eaf3ea;
+    color:#2e7e32;
+    
 
 }
 
-.titulo-acima-sobre{
-margin:90px 0 30px 0;
-padding: 0 0 0 20px;
-color: #fff;
-
+.menu-dropdown:hover .submenu{
+   max-height: 200px;
+   opacity: 1;
+   transform: translateY(4px);
+   padding:6px 0;
 }
+
+
+
 /*---------------------------------------------Elementos "universais" ------------------------------------------ */
 /*fontes*/
 * {
@@ -147,12 +222,14 @@ text-align: center;
     
 }
 
-.campo{
+.campo {
     display: flex;
     flex-direction: column;
     gap: 5px;
     width: 100%;
     box-sizing: border-box;
+    
+
     
 }
 
@@ -435,8 +512,6 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 box-sizing: border-box;     
 }
 
-
-
 .numeroVermelho {
 color: #d32f2f; 
 font-size: 20px;
@@ -444,36 +519,15 @@ font-weight: bold;
 margin: 10px 0 0 0;  
 }
 
-.secao-tabela{
-background-color: #fff;
-padding: 20px;
-border-radius: 8px;
-box-shadow: 0 4px 6px  rgba(0,0,0,0.1);    
-}
 
-.secao-tabela h3 {
-margin-top: 0;
-color: #2e7d32;
+.produtos-saida h3 {
+margin-top: 60px;
+margin-bottom:40px;
+color: #fff;
 
 }
 
-.tabela-produtos {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: left;
 
-}
-
-.tabela-produtos th,.tabela-produtos td{
-padding: 12px;
-border-bottom: 1px solid #ddd;    
-}
-
-.tabela-produtos th{
-background-color: #f4f6f4;
-color: #333333;    
-
-}
 
 .acoes-dashboard{
 display: flex;
@@ -574,42 +628,233 @@ align-items: center;
 }
 
 
-.imagem-home {
-    width: 300px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-
-.info-home {
+.boas-vindas-inicio {
     flex: 1;
     padding: 0 20px;
-
+    color: #fff;
+    text-align: center;
+    margin-bottom: 60px;
 }
 
-.info-home h2 {
+.cartoes-pitch {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.cartao-pitch{ 
+    background-color: #ffffff;
     color: #2e7d32;
-    margin-top: 0;
+    font-weight: bold;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: grid;
+    align-items: center;
+    box-sizing: border-box;
+    text-align: center;
+
 }
 
-.info-home p {
-    color: #666666;
-    font-size: 14px;
+.mensagem-destaque {
+    
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+
+}
+
+.product-arrivals{
+    color:#fff;
+    margin-top:40px;
+    margin-bottom:40px;
+    text-align:center;
+}
+
+.secao-produtos-novos{
+    margin-bottom:40px;
+}
+
+.call-to-action {
+    background-color: #ffffff;
+    color:#2e7d32;
+    gap: 15px;
+    display: flex;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 60px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 16px;
+}
+
+.conhecer-produtos {
+    background-color: #2e7d32;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.secao-receitas{
+    max-width: 100%;
+    justify-content: center;
+    margin:40px 15px 40px 15px;
+    padding:30px;
+    background-color:#fff;
+    border-radius:12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    
+}
+
+.secao-receitas h2{
+   color: #2e7d32;
+   text-align:center;
+   margin-bottom:5px;
+
+}
+
+.subtitulo-receitas{
+
+    text-align:center;
+    color:#666;
+    margin-bottom:25px;
+    
+}
+
+.container-receitas{
+
+    display:flex;
+    gap:30px;
+    align-items:stretch;
+    margin-top: 20px;
+    
+}
+
+.bloco-imagem-prato{
+    
+    flex:1;
+    text-align:center;
+    background-color: #eaf3ea;
+    border: 3px solid #c8cc8c;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    display:flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.bloco-imagem-prato img{
+
+    width:100%;
+    max-width:600px;
+    height:330px;
+    object-fit:cover;
+    border-radius:10px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease;
+}
+
+#legenda-prato{
+    margin-top:15px;
+    font-weight:bold;
+    color:#2e7d32;
+    font-size: 1.15rem; 
+}
+
+.bloco-lista-pratos{
+
+    flex:1;
+    background-color: #eaf3ea;
+    border: 3px solid #c8cc8c;
+    border-radius: 10px;
+    padding:25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.lista-receitas {
+
+    list-style:none;
+    padding:0;
+    margin:0;
+
+}
+
+.item-receita{
+    padding:15px;
+    margin-bottom:12px;
+    border-left: 4 px solid #ccc;
+    background-color:#f9f9f9;
+    border-radius:10px;
+    border-left: 4px solid #ccc;
+    cursor:pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.item-receita:hover{
+    background-color:#e8f5e9;
+    border-left-color:#4caf50;
+    transform: translateX(5px)
 }
 
 
-.lista-compras {
-    list-style: none;
-    padding: 0;
-    margin: 15px 5px 0 5px;
+.item-receita-ativa{
+
+    background-color: #8aa18a;
+    border-left-color:#2e7e32;
+    margin-bottom: 20px; 
+    border-radius: 10px; 
+    text-align: center; 
 }
 
-.lista-compras li {
-    padding: 8px 0;
-    border-bottom: 1px solid #eeeeee;
-    color: #333333;
-    font-weight: 500;
+.item-receita-ativa h3{
+    margin-bottom: 10px;
+}
+
+
+.item-receita h3{
+    margin: 0 0 3px 0;
+    font-size:0.9rem;
+    color:#2e7d32;
+    text-align: center;
+}
+
+.item-receita p{
+    margin: 0;
+    font-size: 0.85rem;
+    color:#333;
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+@media (max-width:768px){
+    .container-receitas{
+        flex-direction:column;
+    }
+
+    .secao-receitas{
+        margin: 20px 10px;
+    }
 }
 
 
@@ -659,11 +904,12 @@ align-items: center;
 textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 2px solid #2e7d32;
     border-radius: 5px;
     box-sizing: border-box;
     font-family: inherit;
     resize: vertical;
+    
 }
 
 
@@ -682,4 +928,30 @@ textarea {
 
 .titulo-acima {
     color:#fff;
+}
+
+
+
+/*---------------------------------------------------Seção Sobre-------------------------------------------------------*/
+
+
+.titulo-acima-sobre{
+margin:90px auto 30px auto;
+padding: 20px 20px 20px 20px;
+background-color: #fff;
+box-sizing:border-box;
+width: 90%;
+border: 1px solid ;
+border-radius: 5px;
+font-family: inherit;
+
+}
+
+.titulo-acima-sobre{
+color: #2e7d32;  
+text-align: justify;  
+}
+
+.titulo-acima-sobre h4,h3{
+    text-align:center;
 }

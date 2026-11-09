@@ -10,11 +10,11 @@
 
  <body>
     <div class="conteudo-principal-centralizado">
-    <form  action="dashboard.html" method="post" class="login-box">
+    <form  action="index.php" method="post" class="login-box">
     <h1 class="mercado" style=" font: size 30px; ;">Quitandaria da Gôda</h1>
     <h2 class="mercado"style="font-size: 22px; font-weight: bold;">Bem vindo(s)(as)!</h2>
     
-        <!--Adicionar os required depois e colocar labels-->
+        <!--Adicionar os required depois -->
         <br>
         <div class="campo">
            <label for="usuario">Usuário</label>
@@ -28,14 +28,15 @@
        
           <br>
           <button type="submit">Entrar</button>
-          <a href="cadastro.html" class="cadastro-link">Cadastre-se</a>
+          <a href="cadastro.php" class="cadastro-link">Cadastre-se</a>
           <!--Refazer página de esqueceu a senha-->
-          <a href="esqueceu_senha.html" class="esqueceu-senha-link">Esqueceu a senha?</a>
+          <a href="esqueceu_senha.php" class="esqueceu-senha-link">Esqueceu a senha?</a>
      </form>
     <br><br>
    <div class="footer-login">
         <p>&copy; 2026 Quitandaria da Gôda. Todos os direitos reservados. Organizações Tabajara.</p>
     </div>
-  </div>  
+  </div> 
+  <script src="../js/script.js"></script> 
 </body>
 </html>
