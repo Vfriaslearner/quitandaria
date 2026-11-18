@@ -25,13 +25,6 @@ legumes,hortaliças, verduras e ítens de mercearia e  as receba no conforto da 
 4. Acesse http://localhost/quitandaria/index.php
 
 
-ESCOLA TÉCNICA ESTADUAL PORTO DIGITAL
-Curso Técnico em Desenvolvimento de Sistemas
-Disciplinas: Programação em Novas Tecnologias · Engenharia de Software
-Aluno desenvolvedor: Vitor Pereira Farias
-Minicurso: Documentação de Sistemas
-Novembro de 2026
-
 ## Usuário de teste
 
 - E-mail: vpf1@etepd.com
@@ -40,13 +33,20 @@ Novembro de 2026
 
 - Requisitos: `docs/requisitos.md`
 - Banco de dados (estrutura): `docs/banco-de-dados.md`
-- Manual do usuário: ``
+- Manual do usuário: `manual-usuario.md`
 - DER: `der.png´
 
 ## Equipe
 
 - Vitor Pereira Farias — back-end (PHP)
 - Vitor Pereira Farias — banco de dados (e o resto)
+
+ESCOLA TÉCNICA ESTADUAL PORTO DIGITAL
+Curso Técnico em Desenvolvimento de Sistemas
+Disciplinas: Programação em Novas Tecnologias · Engenharia de Software
+Aluno desenvolvedor: Vitor Pereira Farias
+Minicurso: Documentação de Sistemas
+Novembro de 2026
 
 
 
