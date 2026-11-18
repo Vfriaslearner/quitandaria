@@ -40,7 +40,7 @@ Novembro de 2026
 
 - Requisitos: `docs/requisitos.md`
 - Banco de dados (estrutura): `docs/banco-de-dados.md`
-- Manual do usuário: `docs/manual-usuario.md`
+- Manual do usuário: ``
 - DER: `der.png´
 
 ## Equipe
