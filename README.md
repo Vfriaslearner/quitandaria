@@ -39,8 +39,9 @@ Novembro de 2026
 ## Documentação
 
 - Requisitos: `docs/requisitos.md`
-- Banco de dados: `database/quitandaria-da-goda.sql`
+- Banco de dados (estrutura): `docs/banco-de-dados.md`
 - Manual do usuário: `docs/manual-usuario.md`
+- DER: `der.png´
 
 ## Equipe
 
