@@ -21,8 +21,8 @@ legumes,hortaliças, verduras e ítens de mercearia e  as receba no conforto da 
 
 1. Instale o XAMPP e ligue Apache e MySQL.
 2. Copie a pasta `quitandaria` para `C:\xampp\htdocs`.
-3. No phpMyAdmin, importe `database/quitandaria.sql`.
-4. Acesse http://localhost/quitandaria
+3. No phpMyAdmin, importe `database/banco_quitandaria_goda.sql`.
+4. Acesse http://localhost/quitandaria/index.php
 
 
 ESCOLA TÉCNICA ESTADUAL PORTO DIGITAL
