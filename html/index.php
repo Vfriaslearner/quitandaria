@@ -24,14 +24,7 @@
        <nav class="menu-navegacao">
         <a href="index.php" class="link-menu"> Página Inicial</a>
         <a href="dashboard.php" class="link-menu">Dashboard</a>
-        <div class="menu-dropdown">
         <a href="produtos.php" class="link-menu">Produtos</a>
-        <div class="submenu">
-            <a href="produtos.php#legumes" class="link-submenu">Legumes e Raízes</a>
-            <a href="produtos.php#frutas" class="link-submenu">Frutas</a>
-            <a href="produtos.php#mercearia" class="link-submenu">Mercearia</a>
-          </div>
-        </div>  
         <a href="contatos.php" class="link-menu">Contato</a>
         <a href="sobre.php" class="link-menu">Sobre a Quitandaria</a>
     </nav>
@@ -45,7 +38,7 @@
    <main class="conteudo-principal-inicio">
         
             <div class="boas-vindas-inicio">
-                <h1>Boas Vindas à Quitandaria da Gôda!</h1>
+                <h2>Boas Vindas à Quitandaria da Gôda!</h2>
             </div>
 
             <section class="cartoes-pitch">
@@ -65,7 +58,7 @@
             </section>
 
             <div class="mensagem-destaque">
-                <h2>Confira os Destaques da Quitandaria !!</h2>
+                <h3>Confira os Destaques da Quitandaria !!</h3>
             </div>    
 
             <section class="secao-tabela-produtos-page">
@@ -161,11 +154,11 @@
 
         <section class="secao-receitas">
             <h2>Pratos com nossos Ingredientes</h2>
-            <p class="subtitulo-receitas">Veja Possibilidades de Pratos Saudáveis Abaixo</p>
+            <p class="subtitulo-receitas">Clique em Um Exemplo de Prato Saudável</p>
 
             <div class="container-receitas">
                 <div class="bloco-imagem-prato">
-                    <img id="imagem-prato-destaque" src="../imagens/nsalada.jpg" alt="Salada Refrescante">
+                    <img id="imagem-prato-destaque" src="../imagens/salada.jpg" alt="Salada Refrescante">
                     <p id="legenda-prato">Salada Tropical Refrescante </p>
                 </div>
 

@@ -25,14 +25,7 @@
        <nav class="menu-navegacao">
         <a href="index.php" class="link-menu"> Página Inicial</a>
         <a href="dashboard.php" class="link-menu">Dashboard</a>
-        <div class="menu-dropdown">
         <a href="produtos.php" class="link-menu">Produtos</a>
-        <div class="submenu">
-            <a href="produtos.php#legumes" class="link-submenu">Legumes e Raízes</a>
-            <a href="produtos.php#frutas" class="link-submenu">Frutas</a>
-            <a href="produtos.php#mercearia" class="link-submenu">Mercearia</a>
-          </div>
-        </div>  
         <a href="contatos.php" class="link-menu">Contato</a>
         <a href="sobre.php" class="link-menu">Sobre a Quitandaria</a>
     </nav>

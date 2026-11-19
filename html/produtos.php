@@ -22,14 +22,7 @@
        <nav class="menu-navegacao">
         <a href="index.php" class="link-menu"> Página Inicial</a>
         <a href="dashboard.php" class="link-menu">Dashboard</a>
-        <div class="menu-dropdown">
         <a href="produtos.php" class="link-menu">Produtos</a>
-        <div class="submenu">
-            <a href="produtos.php#legumes" class="link-submenu">Legumes e Raízes</a>
-            <a href="produtos.php#frutas" class="link-submenu">Frutas</a>
-            <a href="produtos.php#mercearia" class="link-submenu">Mercearia</a>
-          </div>
-        </div>  
         <a href="contatos.php" class="link-menu">Contato</a>
         <a href="sobre.php" class="link-menu">Sobre a Quitandaria</a>
     </nav>
@@ -42,12 +35,11 @@
     
        <main class="conteudo-principal-produtos">
          <div class="titulo-acima-da-tabela">
-            <h1>Lista de Produtos</h1>
-            <h2>Confira os itens disponíveis em estoque na feira.</h2>
+            <h2>Lista de Produtos</h2>
+            <p>Confira os itens disponíveis em estoque na feira.</p>
         </div> 
-     <section id="legumes">
-        <h2 class="legumes">Em Legumes e Raízes</h2>
-        
+
+        <h3 class="legumes">Em Legumes e Raízes</h3>
 
         <section class="secao-tabela-produtos-page">
             <div class="produtos-grid">
@@ -88,22 +80,13 @@
                     <p>Preço:R$ 9,25 /kg</p>
                 </div>
 
-                <div class="produto-card">
-                    <img src="../imagens/abobora.jpg" alt="Abóbora">
-                    <h3>Abóbora Moranguinho</h3>
-                    <p>Preço:R$ 7,25 /kg</p>
-                </div>
-
-        </section>
 
 
                 <!-- Adicione mais produtos conforme necessário -->
             </div>
         </section>
-        
 
-      <section id="frutas">  
-        <h2 class="frutas"> Em Frutas</h2>
+        <h3 class="frutas"> Em Frutas</h3>
 
         <section class="secao-tabela-produtos-page">
             <div class="produtos-grid">
@@ -145,13 +128,13 @@
                 </div>
 
 
-           </section>
+
                 <!-- Adicione mais produtos conforme necessário -->
             </div>
         </section>
 
-      <section id="mercearia">
-        <h2 class="mercearia"> Em Mercearia</h2> 
+
+        <h3 class="mercearia"> Em Mercearia</h3> 
 
 
         <section class="secao-tabela-produtos-page">
@@ -194,7 +177,7 @@
                 </div>
 
 
-         </section>
+
                 <!-- Adicione mais produtos conforme necessário -->
             </div>
         </section>
