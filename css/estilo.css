@@ -39,27 +39,26 @@ width:100%;
 height:150px;
 object-fit:cover;
 border-radius:15px;
-aspect-radius: 1 / 1;
+aspect-ratio: 1 / 1;
 margin-bottom:10px;
 
 }
 
 .titulo-acima-da-tabela {
     color: #fff;
-    margin: 0 0 40px 0;    
+    margin-bottom: 90px;    
     padding: 0 20px;
     text-align:center;
 }
 
 .legumes,.frutas,.mercearia{
-    text-align:left;
+    text-align:center;
     color:#fff;
-    margin-left:20px;
-    margin-bottom:30px;
+    margin-bottom:90px;
 }
 
 .frutas,.mercearia{
-    margin-top:50px;
+    margin-top:90px;
 }
 
 .footer-produtos {
@@ -81,6 +80,59 @@ margin-bottom:10px;
     color: #fff;
     padding:0 0 0 5px 0;
     
+}
+
+.menu-dropdown{
+  position:relative;
+  display:block;
+
+}
+
+.menu-dropdown .submenu {
+    position: absolute;
+    top: 100%;
+    left: 10px;
+    width: 220px;
+
+    max-height: 0;
+    opacity:0;
+    overflow:hidden;
+    transition:max-height 0.4s ease,opacity 0.3 ease,transform 0.3s ease ;
+    transform:translateY(-8px) ;
+    background-color:#fff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    border:1px solid #c8dcc8;
+    border-left: 4px solid #2e7d32;
+    z-index:999;
+    padding:0;
+    list-style: none;
+        
+}
+
+.link-submenu{
+
+    display:block;
+    padding: 8px 14px;
+    color: #333;
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: background-color 0.2s ease,color 0.2s ease;
+}
+
+.link-submenu:hover{
+
+    background-color: #eaf3ea;
+    color:#2e7e32;
+    
+
+}
+
+.menu-dropdown:hover .submenu{
+   max-height: 200px;
+   opacity: 1;
+   transform: translateY(4px);
+   padding:6px 0;
 }
 
 
@@ -657,11 +709,14 @@ align-items: center;
 }
 
 .secao-receitas{
-    margin:40px 0;
+    max-width: 100%;
+    justify-content: center;
+    margin:40px 15px 40px 15px;
     padding:30px;
     background-color:#fff;
     border-radius:12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    
 }
 
 .secao-receitas h2{
@@ -676,42 +731,63 @@ align-items: center;
     text-align:center;
     color:#666;
     margin-bottom:25px;
+    
 }
 
 .container-receitas{
 
     display:flex;
     gap:30px;
-    align-items:center;
+    align-items:stretch;
+    margin-top: 20px;
+    
 }
 
 .bloco-imagem-prato{
     
     flex:1;
     text-align:center;
-
+    background-color: #eaf3ea;
+    border: 3px solid #c8cc8c;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    display:flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
 }
 
 .bloco-imagem-prato img{
 
     width:100%;
-    max-width:450px;
-    height:300px;
+    max-width:600px;
+    height:330px;
     object-fit:cover;
     border-radius:10px;
-    box-shadow:0 4px 8px rgba(0,0,0,0.15);
+    box-shadow:0 6px 15px rgba(0,0,0,0.12);
     transition: transform 0.3s ease;
 }
 
 #legenda-prato{
-    margin-top:10px;
+    margin-top:15px;
     font-weight:bold;
-    color:#333;
+    color:#2e7d32;
+    font-size: 1.15rem; 
 }
 
 .bloco-lista-pratos{
 
     flex:1;
+    background-color: #eaf3ea;
+    border: 3px solid #c8cc8c;
+    border-radius: 10px;
+    padding:25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
 
 .lista-receitas {
@@ -724,12 +800,14 @@ align-items: center;
 
 .item-receita{
     padding:15px;
-    margin-botttom:12px;
+    margin-bottom:12px;
     border-left: 4 px solid #ccc;
     background-color:#f9f9f9;
-    border-radius:0 8px 8px 0;
+    border-radius:10px;
+    border-left: 4px solid #ccc;
     cursor:pointer;
     transition: transform 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
 }
 
 .item-receita:hover{
@@ -738,22 +816,44 @@ align-items: center;
     transform: translateX(5px)
 }
 
+
 .item-receita-ativa{
 
-    background-color: #e8f5e9;
+    background-color: #8aa18a;
     border-left-color:#2e7e32;
-
+    margin-bottom: 20px; 
+    border-radius: 10px; 
+    text-align: center; 
 }
 
+.item-receita-ativa h3{
+    margin-bottom: 10px;
+}
+
+
 .item-receita h3{
-    margin: 0 0 5px 0;
+    margin: 0 0 3px 0;
     font-size:0.9rem;
-    color:#555;
+    color:#2e7d32;
+    text-align: center;
+}
+
+.item-receita p{
+    margin: 0;
+    font-size: 0.85rem;
+    color:#333;
+    text-align: center;
+    margin-top: 10px;
+
 }
 
 @media (max-width:768px){
     .container-receitas{
         flex-direction:column;
+    }
+
+    .secao-receitas{
+        margin: 20px 10px;
     }
 }
 
