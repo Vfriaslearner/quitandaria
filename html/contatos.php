@@ -23,16 +23,16 @@
         </a>
 
        <nav class="menu-navegacao">
-        <a href="index.html" class="link-menu"> Página Inicial</a>
-        <a href="dashboard.html" class="link-menu">Dashboard</a>
-        <a href="produtos.html" class="link-menu">Produtos</a>
-        <a href="contatos.html" class="link-menu">Contato</a>
-        <a href="sobre.html" class="link-menu">Sobre a Quitandaria</a>
+        <a href="index.php" class="link-menu"> Página Inicial</a>
+        <a href="dashboard.php" class="link-menu">Dashboard</a>
+        <a href="produtos.php" class="link-menu">Produtos</a>
+        <a href="contatos.php" class="link-menu">Contato</a>
+        <a href="sobre.php" class="link-menu">Sobre a Quitandaria</a>
     </nav>
 
     
     <div class="menu-usuario">
-        <a href="login.html" class="btn-sair-topo">Sair</a>
+        <a href="login.php" class="btn-sair-topo">Sair</a>
     </div>
     </header>
 
@@ -66,7 +66,7 @@
 
                     <div class="campo">
                         <label for="mensagem">Mensagem ou Pedido</label>
-                        <textarea id="mensagem" rows="4" placeholder="Como podemos te ajudar?" ></textarea>
+                        <textarea id="mensagem" rows="4" style="font-weight: bold;" placeholder="Como podemos te ajudar?" ></textarea>
                     </div>
 
                     <button type="submit" class="btn-cadastrar-item">Enviar Informações</button>
@@ -81,18 +81,19 @@
                     <strong>📍 Endereço da Feira:</strong>
                     <p>Rua das Hortaliças, 123 - Bairro Central</p>
                 </div>
+                <br>
 
                 <div class="item-info">
                     <strong>📞 Atendimento Direto:</strong>
                     <p>(81) 3456-7890</p>
                     <p>(81) 98765-4321 (WhatsApp)</p>
                 </div>
-
+                <br>
                 <div class="item-info">
                     <strong>✉️ E-mail Comercial:</strong>
                     <p>contato@quitandariadagoda.com.br</p>
                 </div>
-
+                <br>
                 <div class="item-info">
                     <strong>⏰ Horário de Funcionamento:</strong>
                     <p>Segunda a Sexta: 07h às 19h</p>
@@ -109,6 +110,7 @@
  <div class="footer">
         <p>&copy; 2026 Quitandaria da Gôda. Todos os direitos reservados. Organizações Tabajara.</p>
     </div>  
-</div> 
+</div>
+<script src="../js/script.js"></script> 
 </body>
 </html>

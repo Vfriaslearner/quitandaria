@@ -20,16 +20,16 @@
         </a>
 
        <nav class="menu-navegacao">
-        <a href="index.html" class="link-menu"> Página Inicial</a>
-        <a href="dashboard.html" class="link-menu">Dashboard</a>
-        <a href="produtos.html" class="link-menu">Produtos</a>
-        <a href="contatos.html" class="link-menu">Contato</a>
-        <a href="sobre.html" class="link-menu">Sobre a Quitandaria</a>
+        <a href="index.php" class="link-menu"> Página Inicial</a>
+        <a href="dashboard.php" class="link-menu">Dashboard</a>
+        <a href="produtos.php" class="link-menu">Produtos</a>
+        <a href="contatos.php" class="link-menu">Contato</a>
+        <a href="sobre.php" class="link-menu">Sobre a Quitandaria</a>
     </nav>
 
     
     <div class="menu-usuario">
-        <a href="login.html" class="btn-sair-topo">Sair</a>
+        <a href="login.php" class="btn-sair-topo">Sair</a>
     </div>
     </header>
      <br>
@@ -58,43 +58,48 @@
             </div> 
         </section> 
         
-        <section class="secao-tabela">
-           <h3>Produtos Com Mais Saída</h3>
-           <table class="tabela-produtos">
-            <thead>
-                <tr>
-                    <th>Item</th>
-                    <th>Categoria</th>
-                    <th>Preço (kg)</th>
-                    <th>Estoque (Hoje)</th>
-                    <th>Abastecer a Partir de:</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>🍅 Tomate Orgânico</td>
-                    <td>Legumes</td>
-                    <td>R$ 8,90/kg</td>
-                    <td>45Kg</td>
-                    <td>40Kg</td>
-                </tr>
-                <tr>
-                    <td>🥕 Cenoura da Fazenda</td>
-                    <td>Legumes</td>
-                    <td>R$ 3.90/kg</td>
-                    <td>87 Kg</td>
-                    <td>45 Kg</td>
-                </tr>
-                <tr>
-                    <td>🍌Banana da Terra</td>
-                    <td>Frutas</td>
-                    <td>R$4,00/kg</td>
-                    <td>100 Kg</td>
-                    <td>50 Kg</td>
-                </tr>
-            </tbody>
-            </table>
-        </section> 
+        <div class="produtos-saida">
+           <h3>Produtos Com Mais Saída</h3>   
+        </div> 
+
+
+        <section class="secao-tabela-produtos-page">
+            <div class="produtos-grid">
+                <div class="produto-card">
+                    <img src="../imagens/banana.jpg" alt="Bananas">
+                    <h3>Bananas</h3>
+                    
+                    <p>Preço: R$ 8,50/ Kg</p>
+                </div>
+
+                <div class="produto-card">
+                    <img src="../imagens/macaxeira.jpg" alt="Macaxeira">
+                    <h3>Leite da Casa </h3>
+                    <p>Preço: R$ 5,00/Kg</p>
+                </div>
+
+                <div class="produto-card">
+                    <img src="../imagens/ovos.jpg" alt="Bandeja de Ovos">
+                    <h3>Ovos</h3>
+                    <p>Preço: R$ 13,50 /Bandeja 30Un</p>
+                </div>
+
+               
+                
+                <div class="produto-card">
+                    <img src="../imagens/quejocoalho.jpg" alt="Queijo Coalho">
+                    <h3>Queijo Coalho da Casa</h3>
+                    <p>Preço: R$ 21,00/Barra</p>
+                </div>
+
+                
+                <!-- Adicione mais produtos conforme necessário -->
+            </div>
+        </section>
+
+
+
+
     </main>  
         <div class="footer">
         <p>&copy; 2026 Quitandaria da Gôda. Todos os direitos reservados. Organizações Tabajara.</p>
@@ -102,5 +107,6 @@
 
 
  </div>
+ <script src="../js/script.js"></script>
 </body>
 </html>

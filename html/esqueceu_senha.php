@@ -19,7 +19,7 @@
             <button type="submit">Enviar</button>
         </form>
 
-        <a href="login.html" class="voltar-login-link">Voltar para Login</a>
+        <a href="login.php" class="voltar-login-link">Voltar para Login</a>
     </div>
     
     </div>
@@ -31,4 +31,5 @@
 
     
 </body>
+<script src="../js/script.js"></script>
 </html> 

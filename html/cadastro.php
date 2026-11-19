@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="conteudo-principal-centralizado">
-    <form action="login.html" method="post" class="cadastro-box">
+    <form action="login.php" method="post" class="cadastro-box">
         <h2 class="cadastro-cliente" >Cadastro de Clientes</h2> 
         <p class="cadastro-cliente">Faça seu cadastro para acessar nossa plataforma e garantir as  melhores promoções!!</p>
         <div class="campo">
@@ -42,5 +42,6 @@
         <p>&copy; 2026 Quitandaria da Gôda. Todos os direitos reservados. Organizações Tabajara.</p>
     </div>
     </div>
+    <script src="../js/script.js"></script>
 </body>
 </html>
