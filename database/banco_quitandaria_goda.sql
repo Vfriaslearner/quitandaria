@@ -1,21 +1,47 @@
 CREATE DATABASE banco_quitandaria_goda;
 USE banco_quitandaria_goda;
 
+
+CREATE TABLE fornecedores (
+    id_fornecedor INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR (100) NOT NULL UNIQUE,
+    email VARCHAR (100) NOT NULL,
+    telefone VARCHAR (15) NOT NULL,
+    cnpj VARCHAR (14) UNIQUE
+);
+
+CREATE TABLE usuarios (
+   id_usuario INT AUTO_INCREMENT PRIMARY KEY,
+   nome VARCHAR (100) NOT NULL,
+   email VARCHAR (100) NOT NULL UNIQUE,
+   senha VARCHAR (255) NOT NULL,
+   perfil ENUM ('CLIENTE','ADMIN','ROOT') DEFAULT 'CLIENTE'
+
+);
+
+
+
 CREATE TABLE produtos (
     id_produto INT AUTO_INCREMENT PRIMARY KEY,
+    id_fornecedor INT NOT NULL,
+    unidade VARCHAR (20) NOT NULL,
+    imagem VARCHAR(255) DEFAULT NULL,
     nome VARCHAR (75) NOT NULL,
     categoria VARCHAR (50) NOT NULL,
     preco DECIMAL (10,2) NOT NULL,
-    quantidade_estoque INT NOT NULL
+    quantidade_estoque INT NOT NULL,
+    FOREIGN KEY (id_fornecedor) REFERENCES fornecedores (id_fornecedor) 
 );
 
 CREATE TABLE clientes (
     id_cliente INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR (100) NOT NULL UNIQUE,
+    id_usuario INT NOT NULL UNIQUE,
+    nome VARCHAR (100) NOT NULL,
     email VARCHAR (100) NOT NULL UNIQUE,
     telefone VARCHAR (15) NOT NULL ,
     cpf CHAR (11) UNIQUE,
-    endereco VARCHAR (200) NOT NULL
+    endereco VARCHAR (200) NOT NULL,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios (id_usuario)
 );
 
 CREATE TABLE vendas (
@@ -28,18 +54,13 @@ CREATE TABLE vendas (
     FOREIGN KEY (id_produto) REFERENCES produtos(id_produto)
 );
 
-CREATE TABLE fornecedores (
-    id_fornecedor INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR (100) NOT NULL UNIQUE,
-    email VARCHAR (100) NOT NULL,
-    telefone VARCHAR (15) NOT NULL,
-    cnpj VARCHAR (14) UNIQUE
-);
 
 CREATE TABLE estoque (
     id_estoque INT AUTO_INCREMENT PRIMARY KEY,
     id_produto INT NOT NULL,
-    quantidade INT NOT NULL,
+    quantidade_movimentada INT NOT NULL,
+    tipo ENUM ('ENTRADA','SAIDA'),
+    data_movimentacao DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (id_produto) REFERENCES produtos(id_produto)
 
 );
@@ -55,4 +76,35 @@ CREATE TABLE  funcionarios (
 );
 
 
+CREATE TABLE mensagens_contato (
+    id_mensagem INT AUTO_INCREMENT PRIMARY KEY,
+    id_usuario  INT NULL,
+    nome VARCHAR (100) NOT NULL,
+    email VARCHAR (100) NOT NULL ,
+    assunto VARCHAR (100) NOT NULL,
+    mensagem VARCHAR (1000) NOT NULL,
+    data_envio DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios (id_usuario)
+);
+
+
+CREATE TABLE log_login (
+    id_log INT AUTO_INCREMENT PRIMARY KEY,
+    id_usuario INT NULL,
+    email_informado VARCHAR (100) NOT NULL ,
+    ip_acesso VARCHAR(45) NOT NULL,
+    sucesso TINYINT(1),
+    data_hora DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios (id_usuario)
+);
+
+
+CREATE TABLE log_logout (
+
+    id_log INT AUTO_INCREMENT PRIMARY KEY,
+    id_usuario INT NULL,
+    ip_acesso VARCHAR(45) NOT NULL,
+    data_hora DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios (id_usuario)
+);
 

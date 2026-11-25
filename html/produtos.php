@@ -1,37 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/estilo.css?v=4">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Produtos | Quitandaria da Gôda </title>
 </head>
 <body>
     <div class="conteudo-principal">
-<header class="topo-dashboard">
-        <a class="quitandaria-logo" href="index.html">
-            <div class="logo-icone">
-                <span class="emojis">🍅🫛🥕</span>
-            </div>
-            <div class="logo-texto">
-                <strong>Quitandaria da Gôda</strong>
-                <span>Sua Feira de Qualidade</span>
-            </div>
-        </a>
 
-       <nav class="menu-navegacao">
-        <a href="index.php" class="link-menu"> Página Inicial</a>
-        <a href="dashboard.php" class="link-menu">Dashboard</a>
-        <a href="produtos.php" class="link-menu">Produtos</a>
-        <a href="contatos.php" class="link-menu">Contato</a>
-        <a href="sobre.php" class="link-menu">Sobre a Quitandaria</a>
-    </nav>
-
+        <?php require_once __DIR__ . '/../includes/header.php'; ?>
     
-    <div class="menu-usuario">
-        <a href="login.php" class="btn-sair-topo">Sair</a>
-    </div>
-    </header>
     
        <main class="conteudo-principal-produtos">
          <div class="titulo-acima-da-tabela">
@@ -39,7 +18,7 @@
             <p>Confira os itens disponíveis em estoque na feira.</p>
         </div> 
 
-        <h3 class="legumes">Em Legumes e Raízes</h3>
+        <h3 class="legumes" id="legumes">Em Legumes e Raízes</h3>
 
         <section class="secao-tabela-produtos-page">
             <div class="produtos-grid">
@@ -86,7 +65,7 @@
             </div>
         </section>
 
-        <h3 class="frutas"> Em Frutas</h3>
+        <h3 class="frutas" id="frutas"> Em Frutas</h3>
 
         <section class="secao-tabela-produtos-page">
             <div class="produtos-grid">
@@ -134,7 +113,7 @@
         </section>
 
 
-        <h3 class="mercearia"> Em Mercearia</h3> 
+        <h3 class="mercearia" id="mercearia"> Em Mercearia</h3> 
 
 
         <section class="secao-tabela-produtos-page">
@@ -191,9 +170,9 @@
         <p>&copy; 2026 Quitandaria da Gôda. Todos os direitos reservados. Organizações Tabajara.</p>
     </div> 
     </main>
-       
-    </a>
-    </div>
-    <script src="../js/script.js"></script>
+
+    
+     <script src="../js/script.js"></script>
+    
 </body>
 </html>

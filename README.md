@@ -1,3 +1,29 @@
+
+# Quitandaria da Gôda
+
+Sistema web completo de e-commerce e gestão interna para hortifrúti e mercearia, desenvolvido com integração ponta a ponta entre Front-end e Back-end.
+
+## Tecnologias Utilizadas
+- **Front-end:** HTML5, CSS3, JavaScript (ES6+ / `localStorage`)
+- **Back-end:** PHP 8+ com PDO (Prepared Statements)
+- **Banco de Dados:** MySQL
+
+## Níveis de Acesso (RBAC)
+- **Cliente (`CLIENTE`):** Navegação pelos produtos, montagem dinâmica da sacola de compras, visualização de resumo do pedido e envio de mensagens de contato.
+- **Administrador (`ADMIN`):** Acesso ao `dashboard.php` com indicadores dinâmicos de estoque, cadastro de produtos e fornecedores, movimentação de estoque (`ENTRADA`/`SAIDA`) e leitura/exclusão de mensagens de contato.
+- **Root (`ROOT`):** Acesso irrestrito ao sistema, incluindo o `painel_root.php` para gerenciamento de perfis de usuários, cadastro de funcionários e auditoria de logs de login e logout.
+
+## Estrutura Principal do Projeto
+- `pages/` (ou raiz PHP): `index.php`, `produtos.php`, `login.php`, `cadastro.php`, `dashboard.php`, `painel_root.php`, `contato.php`
+- `config/conexao.php`: Configuração da conexão PDO com o MySQL
+- `includes/header.php`: Cabeçalho dinâmico adaptado ao perfil da sessão ativa
+- `css/estilo.css`: Folha de estilos principal do sistema
+- `js/script.js`: Lógica da sacola de compras, cálculos em tempo real e interações de interface
+- `sql/`: Scripts de criação e povoamento do banco de dados
+
+
+
+
 # Quitandaria da Gôda
 
 Sistema web de quitandaria/feira online. Navegue, escolha e compre 

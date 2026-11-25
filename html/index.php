@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/estilo.css?v=2">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bem vindos! | Quitandaria da Gôda</title>
@@ -9,31 +9,8 @@
 <body class="pagina-dashboard"> 
     <div class="conteudo-principal">
 
-   
-    <header class="topo-dashboard">
-        <a class="quitandaria-logo" href="index.html">
-            <div class="logo-icone">
-                <span class="emojis">🍅🫛🥕</span>
-            </div>
-            <div class="logo-texto">
-                <strong>Quitandaria da Gôda</strong>
-                <span>Sua Feira de Qualidade</span>
-            </div>
-        </a>
-
-       <nav class="menu-navegacao">
-        <a href="index.php" class="link-menu"> Página Inicial</a>
-        <a href="dashboard.php" class="link-menu">Dashboard</a>
-        <a href="produtos.php" class="link-menu">Produtos</a>
-        <a href="contatos.php" class="link-menu">Contato</a>
-        <a href="sobre.php" class="link-menu">Sobre a Quitandaria</a>
-    </nav>
-
-    
-    <div class="menu-usuario">
-        <a href="login.php" class="btn-sair-topo">Sair</a>
-    </div>
-    </header>
+     <?php require_once __DIR__ . '/../includes/header.php' ; ?>
+          
     
    <main class="conteudo-principal-inicio">
         
@@ -164,25 +141,33 @@
 
             <div class="bloco-lista-pratos">
                 <ul class="lista-receitas">
-                    <li class="item-receita-ativa">
-                        <h3>🥗Salada Tropical Refrescante</h3>
-                        <p>Mix de alface,tomate ceretinho,manga e molho especial</p>
-                    </li>
-                    <li class="item-receita">
-                        <h3>🍜Sopa Cremosa de Abóbora</h3>
-                        <p>Abóbora  cabotiá Fresca com toque de gengibre e ervas.</p>
-                    </li>
-                    <li class="item-receita">
-                        <h3>Escondidinho de Macaxeira com Charque</h3>
-                        <p>Massa de macaxeira leve com charque desfiada </p>
-                    </li> 
-                    <li class="item-receita">
-                        <h3>🧃Suco Detox</h3>
-                        <p>Couve fresca, maçã verde, limão e gengibre selecionados. </p>
-                    </li>  
-                </ul>              
-             </div>
-            </div>
+                <li class="item-receita item-receita-ativa" 
+                   data-imagem="../imagens/salada.jpg" 
+                   data-legenda="Salada Tropical Refrescante">
+                   <h3>🥗 Salada Tropical Refrescante</h3>
+                   <p>Mix de alface, tomate cerejinha, manga e molho especial</p>
+                </li>
+              <li class="item-receita" 
+                  data-imagem="../imagens/sopa-abobora.jpg" 
+                  data-legenda="Sopa Cremosa de Abóbora">
+                  <h3>🍜 Sopa Cremosa de Abóbora</h3>
+                  <p>Abóbora cabotiá fresca com toque de gengibre e ervas.</p>
+              </li>
+              <li class="item-receita" 
+                  data-imagem="../imagens/escondidinho.jpg" 
+                  data-legenda="Escondidinho de Macaxeira com Charque">
+                    <h3>🥘 Escondidinho de Macaxeira com Charque</h3>
+                    <p>Massa de macaxeira leve com charque desfiada</p>
+              </li> 
+              <li class="item-receita" 
+                   data-imagem="../imagens/detox.jpg" 
+                   data-legenda="Suco Detox">
+                   <h3>🧃 Suco Detox</h3>
+                  <p>Couve fresca, maçã verde, limão e gengibre selecionados.</p>
+              </li>  
+           </ul>              
+        </div>
+      </div>
     </section>    
 
          
@@ -192,6 +177,35 @@
 
     </main>
     </div>
-    <script src="../js/script.js"></script>
+    
+       <script>
+             const itensReceita = document.querySelectorAll('.lista-receitas li');
+             const imgDestaque  = document.getElementById('imagem-prato-destaque');
+             const legendaPrato = document.getElementById('legenda-prato');
+
+             itensReceita.forEach((item) => {
+                item.addEventListener('click', () => {
+            // 1. Apaga o destaque de TODOS os itens da lista (inclusive o 1º)
+            itensReceita.forEach((el) => {
+                el.classList.remove('item-receita-ativa');
+                el.classList.add('item-receita');
+            });
+
+            // 2. Acende APENAS a porra do item clicado
+            item.classList.add('item-receita-ativa');
+
+            // 3. Troca a foto e a legenda
+            if (item.dataset.imagem) {
+                imgDestaque.src = item.dataset.imagem;
+            }
+            if (item.dataset.legenda) {
+                legendaPrato.textContent = item.dataset.legenda;
+            }
+        });
+    });
+</script>
+    </script>
+</body>
+</html>
 </body>
 </html>

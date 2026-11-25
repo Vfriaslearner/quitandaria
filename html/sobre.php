@@ -1,37 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="stylesheet" href="../css/estilo.css?v=2">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nossa História | Quitandaria da Gôda</title>
 </head>
 <body class="pagina-dashboard">
-    <div class="conteudo-principal">
-    
-    <header class="topo-dashboard">
-        <a class="quitandaria-logo" href="index.html">
-            <div class="logo-icone">
-                <span class="emojis">🍅🫛🥕</span>
-            </div>
-            <div class="logo-texto">
-                <strong>Quitandaria da Gôda</strong>
-                <span>Sua Feira de Qualidade</span>
-            </div>
-        </a>
-
-       <nav class="menu-navegacao">
-        <a href="index.php" class="link-menu"> Página Inicial</a>
-        <a href="dashboard.php" class="link-menu">Dashboard</a>
-        <a href="produtos.php" class="link-menu">Produtos</a>
-        <a href="contatos.php" class="link-menu">Contato</a>
-        <a href="sobre.php" class="link-menu">Sobre a Quitandaria</a>
-    </nav>
-
-    
-    <div class="menu-usuario">
-        <a href="login.php" class="btn-sair-topo">Sair</a>
-    </div>
+    <?php require_once __DIR__ . '/../includes/header.php'; ?>
     </header>
 
     <main class="conteudo-principal">
